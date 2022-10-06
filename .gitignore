@@ -1,0 +1,6 @@
+# Misc MacOS
+*.DS_Store
+
+# Misc Widnows
+*thumbs.db
+*desktop.ini

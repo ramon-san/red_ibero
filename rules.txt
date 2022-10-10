@@ -1,0 +1,43 @@
+SI ACTUALMENTE NO ESTÁN TRABAJANDO EN ALGO:
+1. git pull
+2. git checkout -b sunombre_suapellido
+3. (hacen sus modificaciones)
+4. git commit -am "los cambios que estén realizando"
+5. git push -u origin sunombre_suapellido
+
+Hasta este punto en Github ya estarán sus modificaciones, pero estás no alterarán la red base.
+
+6. Pull request en https://github.com/ramon-san/red_ibero/pulls, donde del lado izquierdo esté la rama main y del lado derecho esté sunombre_suapellido.
+7. Crean el pull request, verificando que solo los archivos que querían subir sean los modificados y no hayan tocado la red principal (es decir, solo descargan su carpeta y la meten en la de anillos físicos en este caso).
+8. Ramón o su servidor verificamos que todo esté bien y solo nosotros (hasta el momento) podremos aprobar que sus cambios se metan a la rama main.
+
+
+
+SI ACTUALMENTE ESTÁN TRABAJANDO EN ALGO:
+1. git checkout -b sunombre_suapellido
+2. (siguen con sus modificaciones)
+3. git commit -am "los cambios que estén realizando"
+
+Como ya estaban trabajando en algo, no van a tener la última versión, por lo que:
+
+4. git checkout main
+5. git pull
+6. git checkout sunombre_suapellido
+7. git merge main
+
+Si no hay conflictos, pueden seguir con git push -u origin sunombre_suapellido y los pasos del pull request.
+
+Si hay conflictos, nos hablan a Ramón o a mí para poder resolverlos.
+
+
+
+SI YA NO ES LA PRIMERA VEZ QUE HACEN PUSH A GITHUB
+
+1. El comando del push cambia a git push solamente.
+2. Si no tienen la versión más actualizada, deben hacer
+  0. git commit -am "cambios si por casualidad estaban trabajando en algo"
+  a. git checkout main
+  b. git pull
+  c. git checkout sunombre_suapellido
+  d. git merge main
+  e. ... todos los pasos para volver a hacer un commit, un git push, y lo del pull request.
